@@ -1,0 +1,23 @@
+# This repo is public — it must contain ONLY the website.
+# Nothing from the parent dts-trust/ folder (trust deed, letterheads,
+# tracker notes, funding papers) belongs here.
+
+# Trust / private documents
+*.docx
+*.doc
+*.pdf
+*.xlsx
+TRACKER.md
+REVISION.md
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Local env
+.env
+.env.*
+node_modules/
