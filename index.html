@@ -913,8 +913,8 @@ footer{background:var(--footer-bg);color:rgba(242,247,241,.82);padding:54px 0 30
                        The numbers below are PLACEHOLDERS.
    ===================================================================== */
 const CONTACT = {
-  phone: "",
-  display: "Add your number to enable ordering"
+  phone: "918123465725",
+  display: "+91 81234 65725"
 };
 
 const PRODUCTS = [
@@ -1178,9 +1178,15 @@ $("themeToggle").addEventListener("click", () => {
 });
 
 /* ------------------------- init ------------------------- */
-$("phoneVal").textContent = CONTACT.phone
-  ? CONTACT.display
-  : "Add your number to enable ordering";
+if (CONTACT.phone) {
+  $("phoneVal").innerHTML =
+    '<a href="tel:+' + CONTACT.phone + '" style="color:inherit;font-weight:600">' +
+    CONTACT.display + "</a>" +
+    '<br><a href="https://wa.me/' + CONTACT.phone + '" target="_blank" rel="noopener"' +
+    ' style="font-size:.85em">Message on WhatsApp</a>';
+} else {
+  $("phoneVal").textContent = "Add your number to enable ordering";
+}
 
 renderFilters();
 renderCatalog();
