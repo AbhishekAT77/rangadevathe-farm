@@ -32,13 +32,26 @@ Two things live at the top of the `<script>` block near the bottom of `index.htm
 - **`PRODUCTS`** — the catalogue. Each entry carries its price, unit, season and
   description. Prices are in rupees.
 
-After the site has a real URL, update the two link-preview lines in `<head>` so
-WhatsApp and Facebook show the farm seal:
+**The site URL is hardcoded in four places** in `<head>` and they must all agree, or
+link previews and search canonicalisation break:
 
 ```html
-<meta property="og:image" content="https://YOUR-SITE.netlify.app/logo.jpg">
-<meta name="twitter:image" content="https://YOUR-SITE.netlify.app/logo.jpg">
+<link rel="canonical"        href="https://rangadevate-farm-fresh.netlify.app/">
+<meta property="og:url"   content="https://rangadevate-farm-fresh.netlify.app/">
+<meta property="og:image" content="https://rangadevate-farm-fresh.netlify.app/logo.jpg">
+<meta name="twitter:image" content="https://rangadevate-farm-fresh.netlify.app/logo.jpg">
 ```
+
+If the site is ever renamed again or moved to a custom domain, change all four **and**
+regenerate `qr-farm.png` — it encodes the URL and will otherwise point at a dead host.
+
+## The QR code
+
+`qr-farm.png` encodes `https://rangadevate-farm-fresh.netlify.app` for gate and stall use.
+860x860, QR version 5 (37 modules), 20px modules, 3-module quiet zone, brand green
+`#17703C`, with a 240px rounded knockout carrying the farm seal. Error correction is
+level H, which is what lets the seal sit over the middle. Decode-verified down to 160px
+across lanczos, bicubic and box resampling.
 
 ## A note on certification
 
