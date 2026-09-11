@@ -42,11 +42,24 @@ WhatsApp and Facebook show the farm seal:
 
 ## A note on certification
 
-The site does **not** claim the farm is certified organic, because it is not — PGS-India
-certification is still being pursued. It describes the practices followed and states the
-certification position plainly. Please keep it that way until a certificate is actually
-issued; claiming organic certification you do not hold carries real exposure under
-FSSAI's organic labelling rules.
+The farm holds a **PGS-India scope certificate at the GREEN tier** — certificate
+`20260721123132`, issued 21/07/2026, valid to 21/07/2027, covering crop production over
+9.36 Ha. It also holds Yelladakere Gram Panchayat general licence `13/2026-27`, valid to
+13/07/2027. Both are set out in the `#certification` section.
+
+**Green is not Organic.** PGS-India issues two marks: **Green** for land in conversion and
+**Organic** for land that has completed the conversion period. This farm holds Green, so
+the site says "PGS-India Green" and never "certified organic". Please keep it that way
+until an Organic certificate is actually issued — claiming a grade you do not hold carries
+real exposure under FSSAI's organic labelling rules.
+
+The certificate scans are **not** in this repo. `.gitignore` excludes `*.pdf` because the
+repo is public, and the licence scan carries the founder's photograph and handwritten
+personal detail. The site publishes the numbers, which anyone can verify at
+pgsindia-ncof.gov.in, and offers a copy on request.
+
+When either document is renewed, the dates appear in four places in `index.html`: the
+`#certification` cards, the contact card in `#order`, and the footer.
 
 ## Ordering
 
