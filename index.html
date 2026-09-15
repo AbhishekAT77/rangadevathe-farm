@@ -436,6 +436,8 @@ section{padding:76px 0}
 .cline svg{width:19px;height:19px;color:var(--brand);flex:none;margin-top:3px}
 .cline .lbl{font-family:var(--mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px}
 .cline .val{font-size:.93rem;color:var(--ink);line-height:1.5}
+.addr-link{display:block;color:inherit;text-decoration:none}
+.addr-link:hover{color:var(--brand);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--brand) 45%,transparent)}
 .map-link{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:.86rem;font-weight:600;color:var(--brand);text-decoration:none}
 .map-link:hover{text-decoration:underline}
 .map-link svg{width:15px;height:15px;flex:none;fill:currentColor;margin:0;color:inherit}
@@ -505,6 +507,7 @@ footer{background:var(--footer-bg);color:rgba(242,247,241,.82);padding:54px 0 30
 .foot-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
 .foot-grid a{color:rgba(242,247,241,.82);text-decoration:none}
 .foot-grid a:hover{color:#FFD9BE;text-decoration:underline}
+.foot-addr a{display:block;line-height:1.75}
 .foot-map{margin-top:6px}
 .foot-map a{display:inline-flex;align-items:center;gap:7px;color:#FFD9BE;font-weight:600}
 .foot-map a:hover{color:#FFD9BE;text-decoration:underline}
@@ -987,10 +990,14 @@ footer{background:var(--footer-bg);color:rgba(242,247,241,.82);padding:54px 0 30
           <div>
             <span class="lbl">Farm address</span>
             <span class="val">
-              Rangadevathe Organic Farm<br>
-              Survey No. 39/7, Yelladakere<br>
-              NH 150A Huliyar Road, Hiriyur Taluk<br>
-              Chitradurga District, Karnataka 577598
+              <a class="addr-link"
+                 href="https://www.google.com/maps/dir/?api=1&amp;destination=13.7835625%2C76.5604375"
+                 target="_blank" rel="noopener">
+                Rangadevathe Organic Farm<br>
+                Survey No. 39/7, Yelladakere<br>
+                NH 150A Huliyar Road, Hiriyur Taluk<br>
+                Chitradurga District, Karnataka 577598
+              </a>
               <a class="map-link"
                  href="https://www.google.com/maps/dir/?api=1&amp;destination=13.7835625%2C76.5604375"
                  target="_blank" rel="noopener">
@@ -1057,10 +1064,15 @@ footer{background:var(--footer-bg);color:rgba(242,247,241,.82);padding:54px 0 30
       <div>
         <h4>Find us</h4>
         <ul>
-          <li>Survey No. 39/7, Yelladakere</li>
-          <li>NH 150A Huliyar Road</li>
-          <li>Hiriyur Taluk, Chitradurga</li>
-          <li>Karnataka 577598</li>
+          <li class="foot-addr">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=13.7835625%2C76.5604375"
+               target="_blank" rel="noopener">
+              Survey No. 39/7, Yelladakere<br>
+              NH 150A Huliyar Road<br>
+              Hiriyur Taluk, Chitradurga<br>
+              Karnataka 577598
+            </a>
+          </li>
           <li class="foot-map">
             <a href="https://www.google.com/maps/dir/?api=1&amp;destination=13.7835625%2C76.5604375"
                target="_blank" rel="noopener">
